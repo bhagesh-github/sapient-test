@@ -205,12 +205,14 @@ var profile = (function(){
 			range: "max",
 			min: 20,
 			max: 60,
+			value:age,
 			slide: function( event, ui ) {
 				form.find( ".slider-values span:first-child" ).html( ui.value );
 				input.val( ui.value );
 			}
 		}).slider( "option", "value", age);
 		input.val(slider.slider( "value" ) );
+		form.find( ".slider-values span:first-child" ).html( age);
 	}
 	function loadprofile() {
 		if(window.location.pathname.indexOf("profile.html") > -1) {
